@@ -1,1 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Sorte - Gerador Lotofácil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sua Sorte</h1>
+            <p>Gerador de Jogos Lotofácil</p>
+        </header>
+        <div class="grid-container">
+            <p>Escolha 5 números:</p>
+            <div class="cartela" id="grid-numbers"></div>
+            <div id="selected-list">
+                <h3>Seus números escolhidos:</h3>
+                <ul id="chosen-numbers"></ul>
+            </div>
+        </div>
+        <div class="controls">
+            <label for="number-to-generate">Quantos números gerar (15 a 20):</label>
+            <input type="number" id="number-to-generate" min="15" max="20" value="15">
+        </div>
+        <button id="generate-btn">Gerar Jogo</button>
+        <button id="generate-more-btn">Gerar Mais</button>
+        <button id="clear-btn">Limpar Tabela</button>
+        <h2>Jogos Gerados:</h2>
+        <div id="result"></div>
+        <div class="dice">
+            <div class="rotating-dice"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

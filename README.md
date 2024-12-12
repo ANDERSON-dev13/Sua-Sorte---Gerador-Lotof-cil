@@ -20,8 +20,6 @@ Abra no Navegador:
 Extraia os arquivos e abra o arquivo index.html diretamente no seu navegador.
 Use Online (via GitHub Pages):
 
-Após hospedar no GitHub Pages, acesse pelo link gerado.
-Personalize Seu Jogo:
 
 Clique nos números preferidos, configure a quantidade de números a serem gerados, e pronto!
 Tecnologias Usadas 💻

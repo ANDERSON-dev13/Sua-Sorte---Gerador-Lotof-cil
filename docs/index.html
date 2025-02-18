@@ -10,34 +10,41 @@
     <div class="container">
         <header>
             <h1>Sua Sorte</h1>
+            <p>Criado por: Anderson Araujo</p>
             <p>Escolha entre Lotofácil ou Mega-Sena</p>
             <div class="game-selection">
                 <button id="lotofacil-btn">Lotofácil</button>
                 <button id="megasena-btn">Mega-Sena</button>
             </div>
         </header>
+        
         <h2 id="game-type-title">Lotofácil</h2>
-        <div class="grid-container">
-            <p>Escolha seus números:</p>
+        <p id="game-type-indicator">Jogo atual: <strong>Lotofácil</strong></p>   
+
+        <div class="grid-container"> 
             <div class="cartela" id="grid-numbers"></div>
         </div>
-        <div id="selected-list">
-            <h3>Seus números escolhidos:</h3>
-            <ul id="chosen-numbers"></ul>
-        </div>
+
         <div class="controls">
             <label for="number-to-generate">Quantos números gerar:</label>
             <input type="number" id="number-to-generate" min="15" max="20" value="15">
         </div>
+
+        <label>
+            <input type="checkbox" id="distribution-toggle" checked>
+            Usar distribuição de cores
+        </label>
+
         <button id="generate-btn">Gerar Jogo</button>
         <button id="clear-btn">Limpar Tabela</button>
+
         <h2>Jogos Gerados:</h2>
         <div id="result"></div>
     </div>
-    <script src="script.js"></script>
     <footer>
-        <p>Criado por Anderson Araujo</p>
+        <p>Criado por: Anderson Araujo</p>
     </footer> 
-    <p id="game-type-indicator">Jogo atual: <strong>Lotofácil</strong></p>   
+
+    <script src="script.js"></script>
 </body>
 </html>

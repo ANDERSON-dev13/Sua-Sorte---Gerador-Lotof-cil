@@ -6,16 +6,36 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/* Centraliza tudo e melhora o espaçamento */
 .container {
-    margin: 20px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
     max-width: 600px;
+    margin: 0 auto;
 }
-
+/* Centraliza o quadro de números */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Ajusta a grade dos números */
+.cartela {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 10px;
+}
 header h1 {
     font-size: 2.5em;
     color: #00ff66;
@@ -46,74 +66,33 @@ header p {
     background-color: #00d455;
 }
 
-.cartela {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
+/* Efeito ao passar o mouse nos números */
+.number-box:hover {
+    background-color: #00ff00;
+    color: white;
+    transform: scale(1.1);
 }
-
-#grid-numbers {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-#grid-numbers div {
-    background-color: #1a1a1a;
-    border: 2px solid #00ff66;
-    color: #00ff66;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2em;
-    text-align: center;
-    transition: transform 0.2s, background-color 0.2s, color 0.2s;
-}
-
-#grid-numbers div.selected {
+.number-box.selected {
     background-color: #00ff66;
     color: #1a1a1a;
     transform: scale(1.2);
 }
-
+/* Melhora os botões */
 button {
-    background-color: #00ff66;
-    color: #1a1a1a;
-    padding: 12px 20px;
+    background-color: #00ff00;
+    color: black;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
-}
-
-button:hover {
-    background-color: #00d455;
-    transform: scale(1.05);
-}
-
-#result {
-    margin-top: 20px;
+    border-radius: 10px;
+    padding: 12px 20px;
     font-size: 18px;
     font-weight: bold;
-    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
 }
-
-.controls {
-    margin: 20px 0;
-}
-
-.controls input {
-    padding: 5px;
-    border: 1px solid #00ff66;
-    background-color: #1a1a1a;
-    color: #00ff66;
-    border-radius: 4px;
-    font-size: 14px;
+/* Efeito hover nos botões */
+button:hover {
+    background-color: #008000;
+    color: white;
 }
 footer {
     text-align: center;
@@ -124,42 +103,26 @@ footer {
     background-color: #1a1a1a;
     border-top: 1px solid #00ff66;
 }
-#grid-numbers {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    max-width: 350px;
-    margin: 10px auto;
-}
-
-.number-box {
-    width: 50px;
-    height: 50px;
+#color-distribution {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2a2a2a;
-    border: 2px solid #00ff66;
-    color: #00ff66;
-    font-size: 18px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.color-bar {
+    width: 40px;
+    height: 20px;
+    margin: 5px;
+    text-align: center;
+    font-size: 12px;
     font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
 }
-
-.number-box:hover {
-    background-color: #00ff66;
-    color: #1a1a1a;
-    transform: scale(1.1);
-}
-
-.number-box.selected {
-    background-color: #00ff66;
-    color: #1a1a1a;
-    transform: scale(1.2);
-}
-#result p {
+.game-result {
     background-color: #1a1a1a;
     padding: 10px;
     border-radius: 8px;
@@ -169,17 +132,57 @@ footer {
     text-align: center;
     margin-top: 10px;
 }
-@media (max-width: 600px) {
-    .container {
-        max-width: 100%;
-        padding: 15px;
-    }
-    #grid-numbers {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    .number-box {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
+#grid-numbers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Ajusta o tamanho e o espaçamento dos números */
+.number-box {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ajusta os botões e controles */
+.controls {
+    margin-top: 20px;
+}
+/* Ajusta o botão "Gerar Jogo" e "Limpar Tabela" */
+button {
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+/* Melhora a exibição dos jogos gerados */
+#result {
+    margin-top: 30px;
+    padding-top: 15px;
+}
+
+/* Efeito visual nos números sorteados */
+.sorteado {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    color: white;
+    background-color: #2c3e50;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
